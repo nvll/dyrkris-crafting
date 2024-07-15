@@ -6,6 +6,10 @@ import csv
 import enum
 import types
 
+class ItemCategory(enum.IntEnum):
+    """DestinyInventoryCategoryDefinition"""
+
+    WEAPON_MODS = 610365472
 
 class ItemType(enum.IntEnum):
     """DestinyItemType"""
@@ -14,11 +18,9 @@ class ItemType(enum.IntEnum):
     MOD = 19
     PATTERN = 30
 
-
-class ItemCategory(enum.IntEnum):
-    """DestinyInventoryCategoryDefinition"""
-
-    WEAPON_MODS = 610365472
+class PlugSources(enum.IntFlag):
+    REUSABLE_PLUG_ITEMS = 0b010
+    PROFILE_PLUG_SET    = 0b100
 
 
 class SocketCategory(enum.IntEnum):
